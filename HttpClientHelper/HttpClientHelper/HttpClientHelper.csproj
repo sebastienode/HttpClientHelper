@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>WebWrapper</PackageId>
+	<VersionPrefix>1.0.1</VersionPrefix>
   </PropertyGroup>
 
 </Project>
