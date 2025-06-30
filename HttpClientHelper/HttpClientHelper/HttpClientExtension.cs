@@ -16,5 +16,17 @@ namespace HttpClientHelper
 
             return uriBuilder.Uri;
         }
+
+        public static HttpRequestMessage WithHeaders(this HttpRequestMessage request, IDictionary<string, string> headers)
+        {
+            if (headers != null && headers.Any())
+            {
+                foreach (var header in headers.ToDictionary())
+                {
+                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                } 
+            }
+            return request;
+        }
     }
 }
